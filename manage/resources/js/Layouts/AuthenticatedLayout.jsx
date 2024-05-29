@@ -37,7 +37,7 @@ export default function Authenticated({ user, header, children }) {
                                     User
                                 </NavLink>
 
-                                <NavLink href={'#'} active={route().current('#')}>
+                                <NavLink href={route('timecard.index')} active={route().current('timecard.index')}>
                                     TimeCard
                                 </NavLink>
                             </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TimecardController;
 use Laravel\Prompts\Themes\Default\Renderer;
 
 Route::redirect('/', '/dashboard');
@@ -17,6 +18,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('project', ProjectController::class);
     Route::resource('task', TaskController::class);
     Route::resource('user', UserController::class);
+    Route::resource('timecard', TimecardController::class);
 });
 
 Route::middleware('auth')->group(function () {
